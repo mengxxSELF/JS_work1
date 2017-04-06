@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>垂直居中</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         div {
             background: #3cc8c3;
             width: 100%;
@@ -14,7 +18,7 @@
             padding: 0 10px;
             border-radius: 6px;
             text-align: center;
-            margin-bottom:20px;
+            margin:20px 0;
         }
 
         .middle1  {
@@ -24,6 +28,30 @@
         .middle2 {
             display: table-cell;
             vertical-align: middle;
+        }
+
+        .middle3{
+            display: flex;
+            justify-content:center;
+            align-items:Center;
+        }
+
+        .middle4{
+            position: relative;
+        }
+        .middle4 img{
+            position: absolute;
+            left: 0;
+            top:0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+
         }
     </style>
 </head>
@@ -37,13 +65,16 @@
         </p>
     </div>
     <div class="middle2">
-      <span>
-        青青子衿 [固定宽高元素 显示一行文字或者多行垂直居中] display: table-cell;
-        vertical-align: middle;
-        测试行内元素
-      </span>
+        <img src="m.png" alt=""/>
     </div>
-
+    <div class="middle3">
+        <p>尝试flex布局 我是p元素</p>
+        <img src="m.png" alt=""/>
+        <span>我是span元素 span元素</span>
+    </div>
+    <div class="middle4">
+        <img src="m.png" alt=""/>
+    </div>
 
 </body>
 
