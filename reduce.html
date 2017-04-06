@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reduce</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var result = [{
+                subject: 'math',
+                score: 88
+            },
+            {
+                subject: 'chinese',
+                score: 95
+            },
+            {
+                subject: 'english',
+                score: 80
+            }
+        ];
+
+        let scores = result.reduce(function(prev, cur, index, array) {
+            return prev + cur.score
+        },0)
+        console.log(scores);
+    </script>
+
+</body>
+
+</html>

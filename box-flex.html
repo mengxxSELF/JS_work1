@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-flex</title>
+    <style media="screen">
+        div {
+            border-radius: 6px;
+            padding: 0 10px;
+        }
+
+        .parent {
+            border: 1px solid #ccc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction:column;
+
+        }
+
+        .parent div {
+            background: #3cc8c3;
+            width: 90%;
+            min-height: 100px;
+            margin: 10px auto;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .div1{
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='parent'>
+        <div class='div1'>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
