@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float测试</title>
+    <style>
+        .father {
+            width: 300px;
+            margin: 20px 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .son {
+            background: #3cc8c3;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .s1 {
+            float: left;
+        }
+
+        .s2 {
+            width: 100px;
+            height: 40px;
+        }
+
+        .s3 {
+            float: right;
+        }
+
+        .f2 .s1 {
+            float: none;
+            background: #3cc8c3;
+        }
+
+        .f2 .s2 {
+            float: left;
+            border: 1px solid #3cc8c3;
+        }
+          .container {
+            width: 300px;
+            height: 300px;
+            background: #3cc8c3;
+
+             /*  overflow: hidden; */
+          }
+          p {
+            background-color: lightgreen;
+          }
+          .floated {
+           float: left;
+           margin-left: 20px;
+           background-color: blue;
+          }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="father">
+        <span class="son s1">float 111 </span>
+        <div class="son s2"> float 222 </div>
+    </div>
+
+
+
+    <div style="width: 600px; height: 300px; border: solid 1px blue; background-color: yellow;">
+        <div style="float: left; width: 250px; height: 250px; border: solid 1px Aqua; background-color: gray;
+margin: 10px 0 0 10px;">
+            浮动DIV</div>
+        <div style="background-color: red; border: solid 1px green; width: 300px; height: 150px;">
+            跟在浮动元素后边的DIV</div>
+        <span style="background-color: red; border: solid 1px green; margin: 0 0 0 -50px;">
+跟在浮动元素后边的span</span>
+    </div>
+    <div class="father f2">
+        <div class="son s2"> float 222 </div>
+        <span class="s1">float 111 </span>
+    </div>
+<div style="overflow:hidden">
+  <div ></div>
+</div>
+
+
+<div class="container">
+  <div class="floated">
+    Floated div
+  </div>
+  <span>
+    Quae hic ut ab perferendis sit quod architecto,
+    dolor debitis quam rem provident aspernatur tempora
+    expedita.
+  </span>
+</div>
+
+</body>
+
+</html>

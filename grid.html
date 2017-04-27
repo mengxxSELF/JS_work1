@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            border-radius: 6px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hgs {
+            background: #3cc8c3;
+        }
+
+        .hg__header {
+            grid-area: header;
+            margin-bottom: 10px;
+        }
+
+        .hg__footer {
+            margin-top: 10px;
+            grid-area: footer;
+        }
+
+        .hg__main {
+            grid-area: main;
+            margin: 0 10px;
+            padding: 10px;
+        }
+
+        .hg__left {
+            grid-area: navigation;
+        }
+
+        .hg__right {
+            grid-area: ads;
+        }
+
+        .hg {
+            display: grid;
+            grid-template-areas: "header header header" "navigation main ads" "footer footer footer";
+            grid-template-columns: 150px 1fr 150px;
+            grid-template-rows: 100px 1fr 30px;
+            min-height: 100vh;
+            border: 1px solid #3cc8c3;
+        }
+
+        @media screen and (max-width: 600px) {
+            .hg {
+                grid-template-areas: "header" "navigation" "main" "ads" "footer";
+                grid-template-columns: 100%;
+                grid-template-rows: 100px 50px 1fr 50px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hg">
+        <header class="hgs hg__header">Title</header>
+        <main class="hgs hg__main"> Content 山有木兮 灵犀照夜 夜夜笙歌 </main>
+        <aside class="hgs hg__left">Menu</aside>
+        <aside class="hgs hg__right">Ads</aside>
+        <footer class="hgs hg__footer">Footer</footer>
+    </div>
+
+</body>
+
+</html>
